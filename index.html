@@ -439,7 +439,19 @@
                 </ul>
             </div>
             <div class="footer-mailing">
-                <p>Подпишитесь на рассылку</p>
+                <form class="form js-speaker-form">
+                    <div class="form-field">
+                        <p class="title-social">Подпишитесь на рассылку</p>
+                        <label>
+                            <input type="email" name="email" id="email" placeholder="E-mail" />
+                        </label>
+                        <button class="button-submit" type="submit">Подписаться
+                            <svg class="icon-send">
+                                <use href="./images/sprite.svg#icon-send"></use>
+                            </svg>
+                        </button>
+                    </div> 
+                </form>
             </div>
         </div>
     </footer>
@@ -469,6 +481,21 @@
             .getBoundingClientRect();
 
         document.body.style.paddingTop = `${pageHeaderHeight}px`;
+    </script>
+    <script>
+        (() => {
+            document
+                .querySelector('.js-speaker-form')
+                .addEventListener('submit', e => {
+                    e.preventDefault();
+
+                    new FormData(e.currentTarget).forEach((value, name) =>
+                        console.log(`${name}: ${value}`),
+                    );
+
+                    e.currentTarget.reset();
+                });
+        })();
     </script>
 </body>
 </html>

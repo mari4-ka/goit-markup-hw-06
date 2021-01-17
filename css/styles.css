@@ -134,9 +134,9 @@ img {
   display: flex;
   margin-left: auto;
 }
-.contacts.list .item {
+/* .contacts.list .item {
   display: flex;
-}
+} */
 .contacts .link {
   display: flex;
   padding-top: 32px;
@@ -675,17 +675,16 @@ button {
 }
 
 /*footer second block*/
-.footer-social {
+.title-social {
+  margin-top: 0;
+  margin-bottom: 20;
+
   font-size: 14px;
   font-weight: 700;
   line-height: 1.14;
   text-align: left;
 
   color: var(--secondary-text-color);
-}
-.title-social {
-  margin-top: 0;
-  margin-bottom: 20;
 
   text-transform: uppercase;
 }
@@ -728,4 +727,50 @@ button {
 /*footer third block*/
 .footer-mailing {
   margin-left: auto;
+}
+.form-field {
+}
+.form-field input[type='email'] {
+  background-color: var(--accent-bg-color);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  padding: 15px 16px;
+  width: 358px;
+  margin-right: 12px;
+}
+.form-field input[placeholder='E-mail'] {
+  font-size: 16px;
+  line-height: 1.25;
+
+  letter-spacing: 0.03em;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+.button-submit {
+  display: inline-flex;
+  align-items: center;
+
+  border: 1px solid transparent;
+  padding: 10px 29px;
+  border-radius: 4px;
+
+  fill: var(--icon-white);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  background-color: var(--accent-color);
+  color: var(--secondary-text-color);
+
+  transition: var(--function-time) var(--function-cubic);
+}
+.button-submit:hover,
+.button-submit:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+.icon-send {
+  height: 24px;
+  width: 24px;
+  margin-left: 10px;
 }
