@@ -243,10 +243,42 @@
                 </ul>
             </div>
             <div class="footer-mailing">
-                <p>Подпишитесь на рассылку</p>
+                <form class="form js-speaker-form">
+                    <div class="footer-form-field">
+                        <p class="title-social">Подпишитесь на рассылку</p>
+                        <label>
+                            <input type="email" name="email" id="email-sign" placeholder="E-mail" />
+                        </label>
+                        <button class="button-submit" type="submit">Подписаться
+                            <svg class="icon-send">
+                                <use href="./images/sprite.svg#icon-send"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
     </footer>
+    <script>
+        const refs = {
+            openModalBtn: document.querySelector("[data-open-modal]"),
+            closeModalBtn: document.querySelector("[data-close-modal]"),
+            backdrop: document.querySelector("[data-backdrop]"),
+        };
+
+        refs.openModalBtn.addEventListener("click", toggleModal);
+        refs.closeModalBtn.addEventListener("click", toggleModal);
+
+        refs.backdrop.addEventListener("click", logBackdropClick);
+
+        function toggleModal() {
+            refs.backdrop.classList.toggle("is-hidden");
+        }
+
+        function logBackdropClick() {
+            console.log("Это клик в бекдроп");
+        }
+    </script>
     <script>
         const { height: pageHeaderHeight } = document
             .querySelector(".page-header")
@@ -254,5 +286,21 @@
 
         document.body.style.paddingTop = `${pageHeaderHeight}px`;
     </script>
-</body>
-</html>
+    <script>
+        (() => {
+            document
+                .querySelector('.js-speaker-form')
+                .addEventListener('submit', e => {
+                    e.preventDefault();
+
+                    new FormData(e.currentTarget).forEach((value, name) =>
+                        console.log(`${name}: ${value}`),
+                    );
+
+                    e.currentTarget.reset();
+                });
+        })();
+    </script>
+    </body>
+    
+    </html>

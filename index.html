@@ -62,7 +62,48 @@
                 <div class="backdrop is-hidden" data-backdrop>
                     <div class="modal">
                         <button type="button" class="close-button" data-close-modal>&#10006</button>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti, vel.</p>
+                        <form class="modal-window-form js-speaker-form">
+                            <p class="title-modal">Оставьте свои данные, мы вам перезвоним</p>
+                            <ul class="form-field-list">
+                                <li class="form-field-modal">
+                                    <label for="name">Имя</label>
+                                    <div class="icon-position">
+                                        <input type="text" name="name" id="name" />
+                                        <svg class="modal-icon">
+                                            <use href="./images/sprite.svg#icon-modal-name" height="18px" width="18px"></use>
+                                        </svg>
+                                    </div>
+                                </li>
+                                <li class="form-field-modal">
+                                    <label for="tel">Телефон</label>
+                                    <div class="icon-position">
+                                        <input type="tel" name="tel" id="tel" />
+                                        <svg class="modal-icon">
+                                            <use href="./images/sprite.svg#icon-modal-phone" height="18px" width="18px"></use>
+                                        </svg>
+                                    </div>
+                                </li>
+                                <li class="form-field-modal">
+                                    <label for="email">Почта</label>
+                                    <div class="icon-position">
+                                    <input type="email" name="email" id="email" />
+                                        <svg class="modal-icon">
+                                            <use href="./images/sprite.svg#icon-modal-mail" height="18px" width="18px"></use>
+                                        </svg>
+                                    </div>
+                                </li>
+                                <li class="form-field-modal">
+                                    <label for="comments">Комментарий</label>
+                                    <textarea name="comments" id="comments" rows="4" placeholder="Введите текст"></textarea>
+                                </li>
+                                <li class="form-field-modal">
+                                    <input class="checkbox" type="checkbox" name="conditions" id="conditions" checked/>
+                                        <label for="conditions">Соглашаюсь с рассылкой и принимаю <a class="conditions-link" href="">Условия договора</a>
+                                    </label>
+                                </li>
+                            </ul>
+                            <button class="button-modal-submit" type="submit">Отправить</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -440,10 +481,10 @@
             </div>
             <div class="footer-mailing">
                 <form class="form js-speaker-form">
-                    <div class="form-field">
+                    <div class="footer-form-field">
                         <p class="title-social">Подпишитесь на рассылку</p>
                         <label>
-                            <input type="email" name="email" id="email" placeholder="E-mail" />
+                            <input type="email" name="email" id="email-sign" placeholder="E-mail" />
                         </label>
                         <button class="button-submit" type="submit">Подписаться
                             <svg class="icon-send">
