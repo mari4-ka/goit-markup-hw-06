@@ -65,40 +65,55 @@
                         <form class="modal-window-form js-speaker-form">
                             <p class="title-modal">Оставьте свои данные, мы вам перезвоним</p>
                             <ul class="form-field-list">
-                                <li class="form-field-modal">
-                                    <label for="name">Имя</label>
-                                    <div class="icon-position">
+                                <li class="field">
+                                    <label for="name">
+                                        <span class="text">Имя</span>
+                                        <div class="icon-position">
                                         <input type="text" name="name" id="name" />
                                         <svg class="modal-icon">
-                                            <use href="./images/sprite.svg#icon-modal-name" height="18px" width="18px"></use>
+                                            <use href="./images/sprite.svg#icon-modal-name" 
+                                            height="18px" width="18px"></use>
                                         </svg>
-                                    </div>
+                                        </div>
+                                    </label>
                                 </li>
-                                <li class="form-field-modal">
-                                    <label for="tel">Телефон</label>
-                                    <div class="icon-position">
-                                        <input type="tel" name="tel" id="tel" />
+                                <li class="field">
+                                    <label for="tel">
+                                        <span class="text">Телефон</span>
+                                        <div class="icon-position">
+                                        <input type="tel" name="tel" />
                                         <svg class="modal-icon">
-                                            <use href="./images/sprite.svg#icon-modal-phone" height="18px" width="18px"></use>
+                                            <use href="./images/sprite.svg#icon-modal-phone" 
+                                            height="18px" width="18px"></use>
                                         </svg>
-                                    </div>
+                                        </div>
+                                    </label>
                                 </li>
-                                <li class="form-field-modal">
-                                    <label for="email">Почта</label>
-                                    <div class="icon-position">
-                                    <input type="email" name="email" id="email" />
+                                <li class="field">
+                                    <label for="email">
+                                        <span class="text">Почта</span>
+                                        <div class="icon-position">
+                                        <input type="email" name="email" />
                                         <svg class="modal-icon">
-                                            <use href="./images/sprite.svg#icon-modal-mail" height="18px" width="18px"></use>
+                                            <use href="./images/sprite.svg#icon-modal-mail" 
+                                            height="18px" width="18px"></use>
                                         </svg>
-                                    </div>
+                                        </div>
+                                    </label>
                                 </li>
-                                <li class="form-field-modal">
-                                    <label for="comments">Комментарий</label>
-                                    <textarea name="comments" id="comments" rows="4" placeholder="Введите текст"></textarea>
+                                <li class="field">
+                                    <label for="comments">
+                                        <span class="text">Комментарий</span>
+                                        <textarea name="comments" rows="4" placeholder="Введите текст"></textarea>
+                                    </label>
                                 </li>
-                                <li class="form-field-modal">
-                                    <input class="checkbox" type="checkbox" name="conditions" id="conditions" checked/>
-                                        <label for="conditions">Соглашаюсь с рассылкой и принимаю <a class="conditions-link" href="">Условия договора</a>
+                                <li class="field">
+                                    <label>
+                                        <input class="checkbox" type="checkbox" name="conditions" />
+                                        <span class="icon22"></span>
+                                        <span class="conditions">Соглашаюсь с рассылкой и принимаю 
+                                            <a class="conditions-link" href="">Условия договора</a>
+                                        </span>
                                     </label>
                                 </li>
                             </ul>

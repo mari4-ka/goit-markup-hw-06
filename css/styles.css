@@ -172,9 +172,10 @@ img {
 }
 
 /*hero*/
-.hero {
-  text-align: center;
-}
+/* .hero {
+  justify-content: center;
+  margin: 0 auto;
+} */
 .hero-text {
   margin: 0;
   color: var(--secondary-text-color);
@@ -183,6 +184,7 @@ img {
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  text-align: center;
 }
 .hero .overlay {
   max-width: 1600px;
@@ -211,7 +213,9 @@ button {
   font-family: inherit;
 }
 .button {
-  display: inline-flex;
+  display: block;
+  margin: 0 auto;
+
   padding: 10px 32px;
   min-width: 200px;
   border: 1px solid transparent;
@@ -291,6 +295,14 @@ button {
   margin-right: 8px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  background-color: transparent;
+
+  transition: transform var(--function-time) var(--function-cubic);
+}
+.close-button:hover,
+.close-button:focus {
+  color: var(--accent-color);
+  cursor: pointer;
 }
 .modal-window-form {
   padding: 0 40px 40px 40px;
@@ -307,49 +319,51 @@ button {
 .form-field-list {
   list-style: none;
   padding: 0;
-  margin: 0 0 30px 0;
+  margin: 0;
 }
-.form-field-modal {
-  display: flex;
-  flex-direction: column;
+.field {
+  display: block;
   margin-bottom: 10px;
-
   transition: var(--function-time) var(--function-cubic);
 }
-.form-field-modal:last-child {
-  margin-bottom: 0;
+.field:last-child {
+  margin-bottom: 30px;
 }
-.form-field-modal label {
-  text-align: left;
+.field .text {
+  margin-bottom: 4px;
   font-size: 12px;
   line-height: 1.674;
   letter-spacing: 0.01em;
 
   color: var(--primary-text-color);
 }
-.form-field-modal input {
+.field input {
   padding: 11px 12px 11px 41px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   width: 100%;
 }
-.form-field-modal textarea::placeholder {
+.field textarea::placeholder {
   font-size: 12px;
   line-height: 1.167;
   letter-spacing: 0.01em;
 
   color: rgba(117, 117, 117, 0.5);
 }
-.form-field-modal textarea {
+.field textarea {
+  display: block;
   padding: 12px 16px 12px 16px;
   resize: none;
+  width: 100%;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
 }
-
-.form-field-modal label[for='conditions'] {
+.icon-position {
+  position: relative;
+}
+.conditions {
   font-size: 14px;
   line-height: 2;
   letter-spacing: 0.03em;
@@ -366,7 +380,7 @@ button {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-.form-field-modal label[for='conditions']::before {
+.icon22::before {
   content: '';
   display: inline-flex;
   background-image: url(../images/square.svg);
@@ -374,12 +388,8 @@ button {
   height: 15px;
   margin-right: 8.38px;
 }
-.checkbox:checked + label[for='conditions']::before {
-  background-image: url(../images/icon\ check\ b.svg);
-}
-.icon-position {
-  position: relative;
-  display: inline-block;
+.checkbox:checked + .icon22::before {
+  background-image: url(../images/check.svg);
 }
 .modal-icon {
   position: absolute;
@@ -392,22 +402,22 @@ button {
   margin-left: 12px;
 }
 
-.form-field-modal:hover input {
+.field:hover input {
   border-color: var(--accent-color);
   cursor: pointer;
 }
 
-.form-field-modal:hover .modal-icon {
+.field:hover .modal-icon {
   fill: var(--accent-color);
 }
 
 .conditions-link {
   color: var(--accent-color);
 }
+
 .button-modal-submit {
-  color: var(--accent-color);
-}
-.button-modal-submit {
+  display: block;
+  margin: 0 auto;
   border: 1px solid transparent;
   padding: 10px 56px;
   border-radius: 4px;
@@ -427,9 +437,6 @@ button {
 .button-modal-submit:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   cursor: pointer;
-}
-box-shadow .link {
-  text-decoration: none;
 }
 .section {
   padding-top: 94px;
@@ -663,6 +670,7 @@ box-shadow .link {
   display: block;
   margin-top: 0px;
   margin-bottom: 0px;
+  text-decoration: none;
 }
 .card-set .thumb {
   position: relative;
